@@ -20,9 +20,9 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ secrets.AWS_REGION }}
+          aws-access-key-id: AKIA5FCD6KQFTGNRK2MZ
+          aws-secret-access-key: 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
+          aws-region: us-east-1
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -42,5 +42,5 @@ jobs:
       - name: Deploy to AWS Amplify
         run: |
           npm install -g @aws-amplify/cli
-          amplify configure --app-id ${{ secrets.AMPLIFY_APP_ID }} --envName ${{ env.AMPLIFY_ENV_NAME }}
+          amplify configure --app-id d3um1l4se753hf
           amplify push --yes
